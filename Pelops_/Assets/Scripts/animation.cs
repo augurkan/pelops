@@ -112,22 +112,7 @@ public class animation : MonoBehaviour
 
         #endregion
 
-        //if (isWalking)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("Walking");
-        //}
-
-        //if (isWalking)
-        //{
-        //    if (!audioSource.isPlaying)
-        //    {
-        //        audioSource.Play();
-        //    }
-        //    else
-        //    {
-        //        audioSource.Stop();
-        //    }
-        //}
+        
 
     }
 }
