@@ -1,11 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Pelops_/Assets/Scripts/AudioManager.cs.meta
-guid: f6ec5052ddfbc334f85bf903b31b98cf
-=======
 guid: e617ac95c55644f938929ee87c74b211
 timeCreated: 1471644145
 licenseType: Store
->>>>>>> c78397820b906ce5994b971ec6a2b23a8f473346:Pelops_/Assets/FurnishedCabin/Scripts/MoveableObject.cs.meta
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
