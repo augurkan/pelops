@@ -31,6 +31,10 @@ public class animation : MonoBehaviour
     {
 
         Move();
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     void Move()
