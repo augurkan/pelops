@@ -158,7 +158,7 @@ public class animation : MonoBehaviour
 
         if (other.gameObject.tag == "Finish")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         
     }
