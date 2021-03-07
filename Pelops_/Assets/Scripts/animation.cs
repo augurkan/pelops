@@ -7,7 +7,7 @@ public class animation : MonoBehaviour
     Animator anim;
     int isWalkingHash, isWalkingBackHash, isLeftHash, isRightHash;
     private CharacterController _controller;
-    public float moveSpeed=10;
+    public float moveSpeed = 10;
 
     //AudioSource audioSource;
 
@@ -44,7 +44,7 @@ public class animation : MonoBehaviour
 
         bool isWalking = anim.GetBool(isWalkingHash);
         bool isWalkingBack = anim.GetBool(isWalkingBackHash);
-        
+
 
         bool forwardPressed = Input.GetKey("w");
         bool backwardPressed = Input.GetKey("s");
@@ -74,7 +74,7 @@ public class animation : MonoBehaviour
         if (!isWalkingBack && backwardPressed)
         {
             anim.SetBool(isWalkingBackHash, true);
-            
+
         }
 
         if (isWalkingBack && !backwardPressed)
@@ -129,5 +129,49 @@ public class animation : MonoBehaviour
         //    }
         //}
 
+
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKey("e"))
+        {
+            if (other.gameObject.tag == "Radio")
+            {
+                FindObjectOfType<AudioManager>().Play("Radio");
+            }
+
+            if (other.gameObject.tag == "Firin")
+            {
+                FindObjectOfType<AudioManager>().Play("Firin");
+            }
+
+            if (other.gameObject.tag == "Ates")
+            {
+                FindObjectOfType<AudioManager>().Play("Ates");
+            }
+
+            if (other.gameObject.tag == "Kalem")
+            {
+                FindObjectOfType<AudioManager>().Play("Kalem");
+            }
+
+            if (other.gameObject.tag == "Tv")
+            {
+                FindObjectOfType<AudioManager>().Play("Tv");
+            }
+
+            if (other.gameObject.tag == "Cocuk")
+            {
+                FindObjectOfType<AudioManager>().Play("Cocuk");
+            }
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        FindObjectOfType<AudioManager>().Stop(other.gameObject.tag);
+    }
+
 }
