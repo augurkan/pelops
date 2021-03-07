@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartLevel.unity
+    guid: 301102edafa635c459d6ee03dbfbaeb1
+  - enabled: 1
+    path: Assets/Scenes/PelopsGame _Deneme.unity
+    guid: e9adcccb1f6df35479f901602a1cf6a7
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 90e1c18232853ea4c9f522c5cfcd9f87
+  - enabled: 1
+    path: Assets/Scenes/CreditsLevel.unity
+    guid: b97d1114d3a91fc46bfaaee4f332ff96
   m_configObjects: {}
