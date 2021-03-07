@@ -9,7 +9,7 @@ public class animation : MonoBehaviour
     private CharacterController _controller;
     public float moveSpeed = 10;
 
-    //AudioSource audioSource;
+    public HUD Hud;
 
     void Start()
     {
@@ -22,12 +22,13 @@ public class animation : MonoBehaviour
         isLeftHash = Animator.StringToHash("isLeft");
         isRightHash = Animator.StringToHash("isRight");
 
-        //audioSource = gameObject.GetComponent<AudioSource>();
+        
 
     }
 
     void Update()
     {
+
         Move();
     }
 
@@ -50,7 +51,7 @@ public class animation : MonoBehaviour
         bool backwardPressed = Input.GetKey("s");
         bool leftPressed = Input.GetKey("a");
         bool rightPressed = Input.GetKey("d");
-
+        
         #region Walking
 
         if (!isWalking && forwardPressed)
@@ -132,6 +133,30 @@ public class animation : MonoBehaviour
 
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+
+        if (other.gameObject.tag == "Radio" || other.gameObject.tag == "Firin" || other.gameObject.tag == "Tv" || other.gameObject.tag == "Ates" || other.gameObject.tag == "Cocuk" || other.gameObject.tag == "Kalem" )
+        {
+            //if (other.gameObject.tag == "Firin")
+            //{
+            //    Hud.OpenImage1();
+            //}
+
+            //if (other.gameObject.tag == "Ates")
+            //{
+            //    Hud.OpenImage2();
+            //}
+
+            // Radio, Firin, Tv, Ates, Cocuk, Kalem
+            Hud.OpenMessagePanel("");
+            
+        }
+        
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKey("e"))
@@ -144,11 +169,15 @@ public class animation : MonoBehaviour
             if (other.gameObject.tag == "Firin")
             {
                 FindObjectOfType<AudioManager>().Play("Firin");
+               
+                Hud.OpenImage1();
             }
 
             if (other.gameObject.tag == "Ates")
             {
                 FindObjectOfType<AudioManager>().Play("Ates");
+                
+                Hud.OpenImage2();
             }
 
             if (other.gameObject.tag == "Kalem")
@@ -171,7 +200,10 @@ public class animation : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Hud.CloseMessagePanel();
         FindObjectOfType<AudioManager>().Stop(other.gameObject.tag);
+        Hud.CloseImage1();
+        Hud.CloseImage2();
     }
 
 }
