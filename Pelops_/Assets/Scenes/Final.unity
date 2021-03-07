@@ -1667,6 +1667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _alker
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38cd8861641fc1146b056936640dfa9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cd8861641fc1146b056936640dfa9c, type: 3}
 --- !u!1001 &272952164
@@ -1735,6 +1739,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e01236a965b37bb4ab6909ea5a5b460b, type: 3}
       propertyPath: m_Name
       value: _ox
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e01236a965b37bb4ab6909ea5a5b460b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e01236a965b37bb4ab6909ea5a5b460b, type: 3}
@@ -1812,6 +1820,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ec38a7e4efdac84f9194ce3ef7a6c72, type: 3}
       propertyPath: m_Name
       value: _wo_ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ec38a7e4efdac84f9194ce3ef7a6c72, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7ec38a7e4efdac84f9194ce3ef7a6c72, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1897,6 +1909,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: afafaccfcebeae945a6ee58024740c4c, type: 3}
       propertyPath: m_Name
       value: Ch09_nonPBR@Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: afafaccfcebeae945a6ee58024740c4c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afafaccfcebeae945a6ee58024740c4c, type: 3}
@@ -2156,7 +2172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2d3e8daaf0a22284595fe219964b7d72, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3e8daaf0a22284595fe219964b7d72, type: 3}
@@ -2435,7 +2451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &426553610490748981
 Animator:
   serializedVersion: 3
