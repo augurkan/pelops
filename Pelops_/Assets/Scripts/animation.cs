@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class animation : MonoBehaviour
 {
@@ -154,6 +155,11 @@ public class animation : MonoBehaviour
             Hud.OpenMessagePanel("");
             
         }
+
+        if (other.gameObject.tag == "Finish")
+        {
+            SceneManager.LoadScene(3);
+        }
         
     }
 
@@ -183,6 +189,7 @@ public class animation : MonoBehaviour
             if (other.gameObject.tag == "Kalem")
             {
                 FindObjectOfType<AudioManager>().Play("Kalem");
+                Hud.OpenImage4();
             }
 
             if (other.gameObject.tag == "Tv")
@@ -193,6 +200,7 @@ public class animation : MonoBehaviour
             if (other.gameObject.tag == "Cocuk")
             {
                 FindObjectOfType<AudioManager>().Play("Cocuk");
+                Hud.OpenImage3();
             }
 
         }
@@ -204,6 +212,8 @@ public class animation : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop(other.gameObject.tag);
         Hud.CloseImage1();
         Hud.CloseImage2();
+        Hud.CloseImage3();
+        Hud.CloseImage4();
     }
 
 }
